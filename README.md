@@ -4,26 +4,6 @@ Aplicación web para cargar, limpiar y visualizar conjuntos de datos en formato 
 
 ---
 
-## Características
-
-- **Carga de archivos** — Soporta CSV, Excel (.xlsx, .xls, .xlsm, .xlsb) y ODS mediante arrastrar-y-soltar o selector de archivo.
-- **Visualización del dataset original** — Tabla con resaltado automático de filas con celdas vacías.
-- **Limpieza automática de datos** — Detecta y elimina:
-  - Valores nulos, vacíos o marcadores de error (`NaN`, `null`, `n/a`, `error`, etc.)
-  - Filas duplicadas exactas
-  - Valores negativos en columnas que solo admiten positivos (edad, precio, ingreso, etc.)
-  - Fechas inválidas o imposibles
-  - Inconsistencias de capitalización en columnas de texto (ej. "cdmx" vs "CDMX")
-  - Texto en columnas numéricas o fechas no parseables
-- **Normalización** — Las filas limpias se estandarizan automáticamente:
-  - Fechas → formato `YYYY-MM-DD`
-  - Números → sin separadores de miles
-  - Texto → capitalización unificada a la variante más frecuente
-- **Descarga** — Exporta el dataset limpio como CSV con el sufijo `_limpio` en el nombre.
-- **Tablero visual** — Gráficas por columna: histograma para numéricas, pastel o barras horizontales para categóricas.
-
----
-
 ## Tecnologías
 
 | Librería | Uso |
@@ -44,30 +24,6 @@ Aplicación web para cargar, limpiar y visualizar conjuntos de datos en formato 
 - [Node.js](https://nodejs.org) v18 o superior
 - npm, yarn, pnpm o bun
 
-### Pasos
-
-1. Clona el repositorio:
-
-```bash
-git clone <url-del-repositorio>
-cd <nombre-de-la-carpeta>
-```
-
-2. Instala las dependencias:
-
-```bash
-npm install
-```
-
-3. Inicia el servidor de desarrollo:
-
-```bash
-npm run dev
-```
-
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
-
----
 
 ## Estructura del proyecto
 
